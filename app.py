@@ -45,6 +45,8 @@ if  diametro > 0:
 
 
 previsoes = modelo.predict(x)
+r2 = r2_score(y, previsoes )
+st.write(f'precisão do modelo R²: {r2:.2%}')
 
 
 
