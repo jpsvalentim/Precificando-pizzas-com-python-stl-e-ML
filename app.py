@@ -41,3 +41,27 @@ st.divider()
 if  diametro > 0:
     preco_previsto = modelo .predict([[diametro]])[0][0]
     st.write(f'O valor da pizza com diametro de {diametro} cm é de R$ {preco_previsto:.2f}')
+
+
+
+
+
+
+
+"""
+Como medir se ele está dando certo?Existem métricas específicas para saber  se o seu modelo está "mentindo" 
+para você ou se ele realmente aprendeu o padrão.
+
+ As três principais são:
+ 
+ - A. R² (R-Quadrado ou Coeficiente de Determinação)É a métrica mais comum. 
+ Ela varia de 0 a 1 (ou 0% a 100%).O que diz: "Quanto da variação do preço é explicada pelo diâmetro?
+ "Se o $R^2 = 0.90$, significa que o diâmetro explica 90% do preço da pizza.B. 
+ 
+ - MAE (Erro Médio Absoluto)O que diz: "Em média, quantos Reais o modelo erra para cima ou para baixo?
+ "Se o MAE for 2.50, seu modelo erra, em média, R$ 2,50 por previsão.C. 
+ 
+ - Teste Prático (Split Treino/Teste)Atualmente, seu modelo está treinando e testando com os mesmos dados.
+Para saber se ele funciona no "mundo real", o ideal é separar uma parte dos dados (ex: 20%) para 
+testar o modelo após ele ser treinado com os outros 80%.
+"""
