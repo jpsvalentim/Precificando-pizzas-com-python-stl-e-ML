@@ -44,7 +44,7 @@ if  diametro > 0:
 
 
 
-
+previsoes = modelo.predict(x)
 
 
 
